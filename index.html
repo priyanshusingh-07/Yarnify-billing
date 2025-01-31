@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarnify</title>
+    <link rel="stylesheet" href="yarnify.css">
+</head>
+<body>
+    <div class="yarnify">
+        <img src="logo1.png"height="130px" width="500px" >
+    </div>
+    <hr>
+    <div class="invoice">Invoice</div>
+    <div class="inner">
+        <div class="bigFont">Order Date :
+             <input type="date"  id="txt" >
+        </div>
+        <div class="bigFont" >Delivery Date : 
+            <input type="date"  id="txt" >
+        </div>
+
+        <div class="customerName" class="outer">
+            <div class="cusName">
+                <label for="customer">Name :</label>
+            <input type="text" id="customer">
+        </div>
+    </div>
+    </div>
+    <hr><hr>
+    <div class="tab">
+        <table>
+            <thead>
+                <tr>
+                    <th>S.no</S></th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="billingTable">
+                <tr>
+                    <td><input type="number" class="serialNumber" placeholder="S No."></td>
+                    <td><input type="text" class="productName" placeholder="Product Name"></td>
+                    <td><input type="number" class="productQuantity" placeholder="Quantity"></td>
+                    <td><input type="number" class="productPrice" placeholder="Price"></td>
+                    <td class="productTotal">0</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="addItem()" id="add">Add</button><br><br>
+    </div>
+    <div class="btn">
+        <button onclick="calculateTotal()" id="cal">Calculate Total</button>
+    <br>
+    </div>
+    <div class="box3">
+        <div  class="box1">Sub Total:<p id="billTotal">Rs 00</p></div>
+
+    </div>
+    <div class="box4">
+            <label for="discount" class="disc">Discount: Rs 
+                <input type="number" id="discount" placeholder="Discount" class="disco">
+            </label>    
+    </div>
+    <div class="box4">
+        <button onclick="applyDiscount()">Applied Discount</button>
+    </div>
+    <div  class="box5">Total: Rs <p id="payableAmount"> 00</p></div>
+    <button onclick="downlad()" id="red" class="down">Download Pdf</button>
+    <h2><span id="grandTotal" class="rem"></span></h2>
+    <!-- <button onclick="purple()" class="change">Change</button> -->
+    <script src="yarnify.js"></script>
+</body>
+</html>
